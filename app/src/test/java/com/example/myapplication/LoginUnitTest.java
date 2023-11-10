@@ -15,7 +15,7 @@ import static org.hamcrest.CoreMatchers.*;
 public class LoginUnitTest {
 
     private static final String FAKE_STRING = "Login was successful";
-    private static final String FAKE_USERNAME_STRING = "Username is valid";
+    private static final String FAKE_USERNAME_STRING = "Valid Username";
 
     @Mock
     Context mMockContext;
@@ -43,7 +43,7 @@ public class LoginUnitTest {
         String result = myObjectUnderTest.validate_email("admin123@uottawa.ca");
 
         // ...then the result should be the expected one.
-        assertThat(result, is(FAKE_STRING));
+        assertThat(result, is(FAKE_USERNAME_STRING));
     }
 
     @Test
